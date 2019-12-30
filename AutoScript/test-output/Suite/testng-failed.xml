@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="password" value="agerman"/>
+  <parameter name="username" value="minad"/>
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="password" value="agerman"/>
+    <parameter name="username" value="minad"/>
+    <classes>
+      <class name="testngg.DemoD">
+        <methods>
+          <include name="openApp"/>
+          <include name="openApp"/>
+          <include name="testValidLogin"/>
+          <include name="setProp"/>
+          <include name="closeApp"/>
+          <include name="setProp"/>
+        </methods>
+      </class> <!-- testngg.DemoD -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test(failed)" parallel="tests">
+    <parameter name="password" value="manager"/>
+    <parameter name="username" value="admin"/>
+    <classes>
+      <class name="testngg.DemoD">
+        <methods>
+          <include name="openApp"/>
+          <include name="openApp"/>
+          <include name="testValidLogin" invocation-numbers="0"/>
+          <include name="setProp"/>
+          <include name="closeApp"/>
+          <include name="setProp"/>
+        </methods>
+      </class> <!-- testngg.DemoD -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
